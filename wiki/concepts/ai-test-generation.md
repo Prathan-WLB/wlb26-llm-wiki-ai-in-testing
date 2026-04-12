@@ -1,0 +1,130 @@
+---
+title: AI Test Generation
+type: concept
+axis: ai-for-testing
+tags: [ai-for-testing, test-generation, llm, automation, coverage]
+related: [[self-healing-tests]], [[llm-evals]], [[agentic-ai]], [[hallucination]]
+created: 2026-04-10
+updated: 2026-04-10
+---
+
+# AI Test Generation
+
+## Definition
+Using AI — primarily LLMs — to automatically create test cases, test scripts, or test data from source code, specifications, user stories, or observed application behavior.
+
+## ความหมาย
+การใช้ AI — โดยหลักแล้วคือ LLM — เพื่อสร้าง test case, test script, หรือ test data โดยอัตโนมัติจากโค้ด, specification, user story, หรือพฤติกรรมของแอปพลิเคชันที่สังเกตได้
+
+---
+
+## Why It Matters
+Writing tests is labor-intensive and often neglected under delivery pressure. AI test generation lowers the cost of creating tests, making higher coverage economically feasible. It also shifts test authorship — engineers may spend more time reviewing and curating AI-generated tests than writing from scratch.
+
+## ความสำคัญ
+การเขียน test เป็นงานที่ใช้แรงงานมากและมักถูกละเลยภายใต้แรงกดดันในการส่งมอบ AI test generation ลดต้นทุนการสร้าง test ทำให้ coverage ที่สูงขึ้นเป็นไปได้เชิงเศรษฐกิจ นอกจากนี้ยังเปลี่ยนการสร้าง test — วิศวกรอาจใช้เวลามากขึ้นในการ review และ curate test ที่ AI สร้างมากกว่าการเขียนเอง
+
+---
+
+## How It Works
+Different approaches depending on the input:
+
+**From source code:**
+LLMs analyze function signatures, branch logic, and edge conditions to generate unit tests. Tools like GitHub Copilot, CodiumAI, and Amazon Q Developer operate in this space.
+
+**From specifications / user stories:**
+LLMs parse natural language requirements and generate corresponding test scenarios and acceptance criteria.
+
+**From observed behavior (record & generate):**
+Tools record user interactions with an application and use AI to generalize these into reusable test scripts, inferring assertions and edge cases.
+
+**From OpenAPI / schemas:**
+AI generates API test suites from contract definitions, covering happy paths, boundary values, and error conditions automatically.
+
+## กลไกการทำงาน
+วิธีการต่างกันตาม input:
+
+**จาก source code:**
+LLM วิเคราะห์ function signature, branch logic, และ edge condition เพื่อสร้าง unit test เครื่องมืออย่าง GitHub Copilot, CodiumAI, Amazon Q Developer ทำงานในพื้นที่นี้
+
+**จาก specification / user story:**
+LLM แยกวิเคราะห์ requirement ภาษาธรรมชาติและสร้าง test scenario และ acceptance criteria ที่สอดคล้อง
+
+**จากพฤติกรรมที่สังเกตได้ (record & generate):**
+เครื่องมือบันทึก user interaction กับแอปพลิเคชันและใช้ AI สรุปเป็น test script ที่ใช้ซ้ำได้
+
+**จาก OpenAPI / schema:**
+AI สร้าง API test suite จาก contract definition ครอบคลุม happy path, boundary value, และ error condition
+
+---
+
+## Strengths
+- Dramatically lowers the barrier to achieving coverage on new code
+- Generates edge cases humans tend to overlook
+- Consistent style and structure across generated tests
+- Accelerates test-driven development feedback loops
+
+## จุดแข็ง
+- ลดอุปสรรคในการ achieve coverage บนโค้ดใหม่อย่างมาก
+- สร้าง edge case ที่มนุษย์มักมองข้าม
+- รูปแบบและโครงสร้างที่สม่ำเสมอใน test ที่สร้าง
+- เร่ง feedback loop ของ test-driven development
+
+---
+
+## Limitations / Critiques
+- **The oracle problem** — AI generates tests but struggles to generate correct assertions for complex business logic it doesn't understand
+- **Hallucinated tests** — LLMs can generate tests that compile and run but assert the wrong thing, or test behavior that doesn't exist
+- **Coverage ≠ quality** — high line coverage from generated tests doesn't guarantee meaningful testing of business rules
+- **Requires human curation** — generated tests need review; blindly committing AI output into test suites creates technical debt
+- **Context ceiling** — large codebases exceed LLM context windows; generation quality drops on deeply interdependent code
+
+## ข้อจำกัด / ข้อวิจารณ์
+- **Oracle problem** — AI สร้าง test ได้แต่ยากในการสร้าง assertion ที่ถูกต้องสำหรับ business logic ที่ซับซ้อน
+- **Hallucinated tests** — LLM สามารถสร้าง test ที่ compile และรันได้แต่ assert สิ่งที่ผิด หรือทดสอบพฤติกรรมที่ไม่มีอยู่
+- **Coverage ≠ คุณภาพ** — line coverage สูงจาก generated test ไม่รับประกันการทดสอบ business rule ที่มีความหมาย
+- **ต้องการ human curation** — generated test ต้องการการ review
+- **Context ceiling** — codebase ขนาดใหญ่เกิน context window ของ LLM คุณภาพลดลงกับโค้ดที่ซับซ้อน
+
+---
+
+## Compared To / เปรียบเทียบกับ
+- **[[self-healing-tests]]** — complementary: generation creates tests, self-healing keeps them working / เสริมกัน: generation สร้าง test, self-healing รักษาให้ทำงานต่อไป
+- **Property-based testing** — classic technique for automated test case generation, but rule-based; AI generation handles unstructured specs / เทคนิคคลาสสิกสำหรับสร้าง test case อัตโนมัติ แต่เป็น rule-based
+
+---
+
+## Tools (2025)
+- **CodiumAI / Qodo** — LLM-based unit test generation, IDE-integrated
+- **GitHub Copilot** — test suggestion inline with code authoring
+- **Amazon Q Developer** — test generation within AWS toolchain
+- **Diffblue Cover** — Java-focused automated unit test generation
+- **Applitools, Mabl** — AI-assisted E2E test creation from recorded sessions
+
+## เครื่องมือ (ปี 2568)
+- **CodiumAI / Qodo** — การสร้าง unit test ด้วย LLM แบบ IDE-integrated
+- **GitHub Copilot** — เสนอ test inline ขณะเขียนโค้ด
+- **Amazon Q Developer** — สร้าง test ภายใน AWS toolchain
+- **Diffblue Cover** — สร้าง unit test อัตโนมัติสำหรับ Java
+- **Applitools, Mabl** — สร้าง E2E test ด้วย AI จาก session ที่บันทึก
+
+---
+
+## Current State
+Commercially active and fast-moving (2025). Unit test generation is the most mature segment. E2E and integration test generation from specs is less reliable. The gap between "tests that run" and "tests that test the right thing" remains the central unsolved challenge.
+
+## สถานะปัจจุบัน
+Active เชิงพาณิชย์และเปลี่ยนแปลงเร็ว (ปี 2568) การสร้าง unit test เป็น segment ที่เติบโตที่สุด การสร้าง E2E และ integration test จาก spec ยังไม่น่าเชื่อถือ ช่องว่างระหว่าง "test ที่รันได้" และ "test ที่ทดสอบสิ่งที่ถูกต้อง" ยังคงเป็นความท้าทายหลักที่ยังไม่ได้รับการแก้ไข
+
+---
+
+## Open Questions / คำถามที่ยังไม่มีคำตอบ
+- Can AI generate tests that are truly specification-complete — not just syntactically valid? / AI สามารถสร้าง test ที่ครบถ้วนตาม specification จริงๆ ได้หรือไม่?
+- How do you systematically detect hallucinated assertions in generated test suites? / จะตรวจจับ assertion ที่ hallucinate ใน generated test suite อย่างเป็นระบบได้อย่างไร?
+- Does AI test generation shift the oracle problem or solve it? / AI test generation เปลี่ยน oracle problem หรือแก้ไขมัน?
+
+---
+
+## Related / หน้าที่เกี่ยวข้อง
+[[self-healing-tests]] · [[llm-evals]] · [[agentic-ai]] · [[hallucination]]
+[[ais-impact-on-software-testing-qa-evolution]] (source / แหล่งที่มา)
