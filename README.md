@@ -17,7 +17,7 @@ A persistent, compounding knowledge base on the intersection of **Software Testi
 
 1. **Clone the repo**
    ```bash
-   git clone git@github.com:Prathan-WLB/llm-wiki-ai-in-testing.git
+   git clone git@github.com:Prathan-WLB/wlb26-llm-wiki-ai-in-testing.git
    ```
 2. **Open in Obsidian** — "Open folder as vault". Shared `.obsidian/` config is included so everyone gets the same setup.
 
