@@ -36,10 +36,10 @@ sources/            Raw source material (articles, papers, PDFs). Immutable.
 wiki/
   _index.md         Master index — overview, key themes, all pages by category.
   _log.md           Ingest log — one entry per session.
-  concepts/         Core ideas and techniques (10 pages).
+  concepts/         Core ideas and techniques (12 pages).
   tools/            Tools, frameworks, and libraries.
   papers/           Paper and article summaries (2 pages).
-  summaries/        Source summaries (4 pages).
+  summaries/        Source summaries (5 pages).
   people/           Key researchers and practitioners.
   companies/        Companies and products.
   synthesis/        Cross-cutting analysis (2 pages).
@@ -54,7 +54,7 @@ commit-message-convention.md  Commit message convention for the team.
 ### Concepts
 - Agentic AI, Multi-Agent Systems, AgentOps
 - LLM Evals, LLM-as-Judge, Hallucination
-- AI Test Generation, Self-Healing Tests
+- AI Test Generation, Self-Healing Tests, Risk-Based Testing, Pairwise Testing
 - Agentic RAG, Agent Observability
 
 ### Papers & Summaries
@@ -63,6 +63,7 @@ commit-message-convention.md  Commit message convention for the team.
 - AI's Impact on Software Testing & QA Evolution
 - Karpathy LLM Wiki Pattern
 - Prompts to Production: Agentic Playbook
+- AI in Software Testing: WLB Trend Update & Business Readiness Guide (2026)
 
 ### Synthesis
 - AI Tool Selection Rubric

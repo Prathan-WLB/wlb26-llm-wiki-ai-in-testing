@@ -11,6 +11,25 @@ grep "^## \[.*\] ingest" wiki/_log.md
 
 ---
 
+## [2026-04-12] ingest | AI in Software Testing: Trend Update & Business Readiness Guide (WLB, April 2026)
+
+**แหล่งที่มา**: We Love Bug Co., Ltd. (WLB). Internal Strategic Reference. April 2026.
+**ไฟล์**: `sources/reports/AI-in-Software-Testing.md`
+
+**สร้างใหม่**:
+- `wiki/summaries/ai-in-software-testing-wlb-2026.md` — full summary with market stats, As-Is→To-Be for 4 areas, AI classification taxonomy, tools map, phased roadmap
+- `wiki/concepts/risk-based-testing.md` — concept stub: AI-augmented risk scoring from defect history, complexity, change frequency; SeaLights/Tosca tools
+- `wiki/concepts/pairwise-testing.md` — concept stub: combinatorial technique; AI adds parameter extraction, risk weighting, auto-regeneration
+
+**อัปเดต**:
+- `wiki/concepts/ai-test-generation.md` — เพิ่ม: BVA/EP/STT/DT automation section, pairwise/RBT integration, E2E alternative flows via chain-of-thought, 80% time benchmark, 2026 stats (61% org adoption, 42% QA leaders priority), updated tools list, new related links
+- `wiki/concepts/self-healing-tests.md` — เพิ่ม BrowserStack 2026 confirmation: "up to 30% of QA team time" for script maintenance pre-AI
+- `wiki/_index.md` — เพิ่ม risk-based-testing, pairwise-testing ใน Concepts; summary ใน Summaries; page_count: 21, source_count: 6
+
+**น่าสนใจ**: **80% time efficiency improvement** (Thoughtworks) คือ benchmark ที่เป็นรูปธรรมที่สุดใน wiki สำหรับ AI test generation ROI ตัวเลข **61% org adoption** และ **88% budget increase intent** แสดงว่า AI testing ข้ามเส้น "early adopter" ไปแล้ว การที่ Integration ติดอันดับ 1 (37%) ขณะที่ budget ติดอันดับ 5 เป็น signal สำคัญ: bottleneck ไม่ใช่ความตั้งใจหรืองบประมาณ แต่เป็น workflow integration ความสัมพันธ์ระหว่าง **adoption timeline** (4+ years → 83% more likely >100% ROI) กับ ROI เสริม Key Theme #5 (Tool Selection Matters): เวลาที่เริ่มใช้ก็สำคัญไม่แพ้การเลือกเครื่องมือ
+
+---
+
 ## [2026-04-12] query | How many levels of human-in-the-loop?
 
 **คำถาม**: How many levels of human involvement exist in agentic AI autonomy frameworks?

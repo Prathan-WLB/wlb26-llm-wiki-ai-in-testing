@@ -19,7 +19,7 @@ Test automation that automatically detects and repairs broken selectors, locator
 ---
 
 ## Why It Matters
-Test suite maintenance is one of the largest hidden costs in software testing. UI changes — even minor ones like renaming a CSS class or moving a button — can break hundreds of automated tests. Teams routinely spend 30–50% of testing time fixing broken tests rather than writing new ones. Self-healing tests directly attack this maintenance burden.
+Test suite maintenance is one of the largest hidden costs in software testing. UI changes — even minor ones like renaming a CSS class or moving a button — can break hundreds of automated tests. Teams routinely spend 30–50% of testing time fixing broken tests rather than writing new ones. The WLB 2026 report cites BrowserStack data confirming that traditional automation scripts required **up to 30% of QA team time** for maintenance alone — before AI self-healing. Self-healing tests directly attack this maintenance burden.
 
 ## ความสำคัญ
 การดูแลรักษา test suite เป็นหนึ่งในต้นทุนซ่อนที่ใหญ่ที่สุดในการทดสอบซอฟต์แวร์ การเปลี่ยนแปลง UI — แม้เล็กน้อยอย่างการเปลี่ยนชื่อ CSS class หรือย้ายปุ่ม — สามารถทำให้ automated test หลายร้อยตัวล้มเหลว ทีมมักใช้เวลา 30–50% ในการแก้ test ที่พัง แทนที่จะเขียน test ใหม่ Self-healing tests แก้ปัญหา maintenance burden นี้โดยตรง

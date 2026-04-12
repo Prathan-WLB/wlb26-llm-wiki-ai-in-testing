@@ -2,10 +2,10 @@
 title: AI Test Generation
 type: concept
 axis: ai-for-testing
-tags: [ai-for-testing, test-generation, llm, automation, coverage]
-related: [[self-healing-tests]], [[llm-evals]], [[agentic-ai]], [[hallucination]]
+tags: [ai-for-testing, test-generation, llm, automation, coverage, bva, pairwise-testing, risk-based-testing, e2e-testing]
+related: [[self-healing-tests]], [[llm-evals]], [[agentic-ai]], [[hallucination]], [[risk-based-testing]], [[pairwise-testing]]
 created: 2026-04-10
-updated: 2026-04-10
+updated: 2026-04-12
 ---
 
 # AI Test Generation
@@ -94,27 +94,44 @@ AI สร้าง API test suite จาก contract definition ครอบค�
 
 ---
 
-## Tools (2025)
+## Classical Test Design Techniques — AI-Augmented
+
+From [[ai-in-software-testing-wlb-2026]], AI now automates derivation across all major black-box techniques:
+
+**BVA + Equivalence Partitioning**: AI parses requirement text → auto-identifies partitions and boundary values. Given *"Age input 18–65"* → generates EP partitions (valid 18–65, invalid <18/>65) and BVA values (17, 18, 65, 66) in seconds. Analyst role shifts from derivation to validation.
+
+**State Transition Testing**: AI infers state-machine models from behavioral specs or Gherkin → generates valid and invalid transition coverage systematically.
+
+**Decision Tables**: LLMs parse conditions/actions from PRDs → test cases for all rule combinations. High value for eligibility logic, pricing rules, workflow gating.
+
+**Pairwise / Combinatorial**: AI extends ACTS-style tools with parameter extraction from requirements, risk weighting, and automatic regeneration when parameters change. See [[pairwise-testing]].
+
+**Risk-Based Prioritization**: AI scores modules by defect history, complexity, change frequency, and usage analytics → data-driven coverage allocation. See [[risk-based-testing]].
+
+**E2E Alternative Flows**: Chain-of-thought prompting is the recommended technique for generating alternative paths (negative, exception, error-handling) — AI reasons step-by-step through decision points before generating scenarios, producing logical completeness over ad-hoc human brainstorming. Agentic AI can further explore live/staging apps to surface undocumented paths.
+
+### Key Benchmarks (2026)
+- **80% time efficiency improvement** vs. manual test case generation (Thoughtworks research)
+- Test suite redundancy: **10–25% (manual) → <5% (AI deduplication)**
+- Requirement-to-test traceability: partial → **95%+ automated**
+
+---
+
+## Tools (2026)
 - **CodiumAI / Qodo** — LLM-based unit test generation, IDE-integrated
 - **GitHub Copilot** — test suggestion inline with code authoring
 - **Amazon Q Developer** — test generation within AWS toolchain
 - **Diffblue Cover** — Java-focused automated unit test generation
 - **Applitools, Mabl** — AI-assisted E2E test creation from recorded sessions
-
-## เครื่องมือ (ปี 2568)
-- **CodiumAI / Qodo** — การสร้าง unit test ด้วย LLM แบบ IDE-integrated
-- **GitHub Copilot** — เสนอ test inline ขณะเขียนโค้ด
-- **Amazon Q Developer** — สร้าง test ภายใน AWS toolchain
-- **Diffblue Cover** — สร้าง unit test อัตโนมัติสำหรับ Java
-- **Applitools, Mabl** — สร้าง E2E test ด้วย AI จาก session ที่บันทึก
+- **Tricentis Tosca** — model-based testing with risk-based prioritization
+- **PractiTest SmartFox** — AI test step generation and optimization
+- **ChatGPT / Claude API** — custom prompt engineering for BVA/EP/DT/pairwise generation
+- **SeaLights** — AI-Driven Test Impact Analysis (run only tests relevant to code changes)
 
 ---
 
 ## Current State
-Commercially active and fast-moving (2025). Unit test generation is the most mature segment. E2E and integration test generation from specs is less reliable. The gap between "tests that run" and "tests that test the right thing" remains the central unsolved challenge.
-
-## สถานะปัจจุบัน
-Active เชิงพาณิชย์และเปลี่ยนแปลงเร็ว (ปี 2568) การสร้าง unit test เป็น segment ที่เติบโตที่สุด การสร้าง E2E และ integration test จาก spec ยังไม่น่าเชื่อถือ ช่องว่างระหว่าง "test ที่รันได้" และ "test ที่ทดสอบสิ่งที่ถูกต้อง" ยังคงเป็นความท้าทายหลักที่ยังไม่ได้รับการแก้ไข
+Commercially active and fast-moving (2026). Unit test generation is the most mature segment. Classical black-box technique automation (BVA, EP, STT, DT) is now commercially viable. E2E alternative flow generation via LLM is an emerging high-value use case. **61% of organizations use AI across most testing workflows** (BrowserStack 2026); test case generation cited as top priority by 42% of QA leaders.
 
 ---
 
@@ -126,5 +143,6 @@ Active เชิงพาณิชย์และเปลี่ยนแปล�
 ---
 
 ## Related / หน้าที่เกี่ยวข้อง
-[[self-healing-tests]] · [[llm-evals]] · [[agentic-ai]] · [[hallucination]]
+[[self-healing-tests]] · [[llm-evals]] · [[agentic-ai]] · [[hallucination]] · [[risk-based-testing]] · [[pairwise-testing]]
 [[ais-impact-on-software-testing-qa-evolution]] (source / แหล่งที่มา)
+[[ai-in-software-testing-wlb-2026]] (source / แหล่งที่มา — 80% benchmark, BVA/EP/STT/DT/pairwise/RBT automation, E2E alternative flows)

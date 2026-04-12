@@ -1,8 +1,8 @@
 ---
 title: Software Testing & AI — Wiki Index / ดัชนี Wiki
 updated: 2026-04-12
-page_count: 18
-source_count: 5
+page_count: 21
+source_count: 6
 ---
 
 # Software Testing & AI — Index / ดัชนี
@@ -41,6 +41,8 @@ Two intersecting axes / สองแกนที่ตัดกัน:
 | [[agentops]] | Disciplined operationalization of agents in production; extends DevOps/MLOps with tool management, agent brain prompts, memory, task decomposition / การนำ agent ไปใช้งาน production อย่างมีวินัย | both |
 | [[multi-agent-systems]] | Architectures where multiple specialized agents collaborate; 4 system types, 5 architectural patterns, agent role taxonomy / สถาปัตยกรรมที่ agent เฉพาะทางหลายตัวร่วมกัน | both |
 | [[agentic-rag]] | Agents that actively orchestrate retrieval — iterative query refinement, multi-source selection, validation before generation / agent ที่ประสานงาน retrieval อย่างแข็งขัน | both |
+| [[risk-based-testing]] | AI converts subjective risk judgment into data-driven scoring using defect history, complexity, and change frequency; drives test prioritization / AI เปลี่ยนการตัดสินใจเรื่องความเสี่ยงเป็นคะแนนที่วัดได้ | ai-for-testing |
+| [[pairwise-testing]] | Combinatorial technique covering all parameter pairs; AI adds extraction from requirements, risk weighting, and auto-regeneration / เทคนิค combinatorial ครอบคลุมทุกคู่พารามิเตอร์ | ai-for-testing |
 
 ## Tools / เครื่องมือ
 
@@ -63,6 +65,7 @@ Two intersecting axes / สองแกนที่ตัดกัน:
 | [[karpathy-llm-wiki-pattern]] | Karpathy's pattern for LLM-maintained persistent wikis; alternative to RAG; ingest/query/lint operations are agentic workflows / รูปแบบ wiki ที่ LLM ดูแลรักษา; ทางเลือกแทน RAG | both |
 | [[prompts-to-production-agentic-playbook]] | Goswami (InfoQ 2026): ASDLC, capability matrix for det. vs. agentic decomposition, 7 orchestration patterns, 5-artifact versioning; methodology beats model size (GPT-3.5 iterative 95.1% > GPT-4 zero-shot 67%) / playbook การพัฒนา agentic จาก prototype สู่ production | both |
 | [[google-agents-companion]] | Google (Feb 2025): AgentOps + trajectory eval + multi-agent patterns + contractor model; the "102" production guide for agent builders / คู่มือ "102" สำหรับ agent builder ที่เน้น production | both |
+| [[ai-in-software-testing-wlb-2026]] | WLB internal report (Apr 2026): As-Is→To-Be map for 4 areas (Strategy, Plan, Case Design, E2E); 80% time reduction benchmark; phased adoption roadmap; 61% org adoption stat / รายงาน WLB ครอบคลุม 4 พื้นที่หลัก | ai-for-testing |
 
 ## People / บุคคล
 
