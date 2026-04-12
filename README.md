@@ -107,4 +107,4 @@ Tags: `[Created]`, `[Added]`, `[Edited]`, `[Fixed]`, `[Updated]`, `[Deleted]`, `
 
 ## License
 
-Internal use.
+Original content is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Third-party materials in `sources/` remain under their respective authors' copyright.
