@@ -60,6 +60,23 @@ AI automates this triage, assigning a risk score per module that drives techniqu
 
 ---
 
+## Connection to Autonomy Level Selection
+
+Risk scores directly determine the appropriate human oversight level for AI testing decisions — not just test prioritization depth. From [[ai-testing-autonomy-decision-guide]]:
+
+```
+Risk Score = Likelihood of Failure (1–3) × Business Impact (1–3)
+
+Score 7–9 (Critical)  → HITL required for AI decisions on this module
+Score 4–6 (High)      → HOTL minimum; HITL for production-affecting gates
+Score 2–3 (Medium)    → HAbL acceptable with validated AI + monitoring
+Score 1   (Low)       → HBtL acceptable for fully automated tasks
+```
+
+This extends the RBT model beyond "how much testing to run" to "how much human oversight to require when AI makes testing decisions." A high-risk module does not just need more tests — it needs a human approving AI-generated tests before they enter the official suite.
+
+---
+
 ## Current State
 Commercially active (2026). SeaLights, Tricentis Tosca, and Inflectra SpiraTest implement AI-driven risk scoring. Integration with CI/CD pipelines (running tests based on what code changed) is the primary production use case. Standalone risk ML models are less common than integrated test impact analysis tools.
 
@@ -73,6 +90,7 @@ Commercially active (2026). SeaLights, Tricentis Tosca, and Inflectra SpiraTest 
 ---
 
 ## Related
-[[ai-test-generation]] · [[pairwise-testing]] · [[self-healing-tests]]
+[[ai-test-generation]] · [[pairwise-testing]] · [[self-healing-tests]] · [[agentic-ai]]
 [[ai-in-software-testing-wlb-2026]] (source — AI-augmented RBT in test case design)
 [[ais-impact-on-software-testing-qa-evolution]] (source — AI capabilities taxonomy)
+[[ai-testing-autonomy-decision-guide]] (source — risk score → autonomy level formula)

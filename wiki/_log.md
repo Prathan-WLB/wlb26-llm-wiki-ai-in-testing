@@ -11,6 +11,36 @@ grep "^## \[.*\] ingest" wiki/_log.md
 
 ---
 
+## [2026-04-13] ingest | AI in Software Testing — Autonomy Level Decision Guide (WLB, April 2026)
+
+**แหล่งที่มา**: We Love Bug Co., Ltd. (WLB). Internal Enterprise Deployment Reference. April 2026.
+**ไฟล์**: `sources/reports/ai-testing-autonomy-decision-guide.md`
+
+**สร้างใหม่**:
+- `wiki/summaries/ai-testing-autonomy-decision-guide.md` — full summary: decision flowchart, 19-task × risk matrix, override rate KPI, governance requirements per level, AI type × level mapping, WLB As-Is→To-Be, maturity progression model, 3 rules from conclusion
+
+**อัปเดต**:
+- `wiki/concepts/agentic-ai.md` — added override rate health metric (10–30% HITL), governance infrastructure note, link to new summary
+- `wiki/concepts/risk-based-testing.md` — added Risk Score → autonomy level formula (L×I maps to HITL/HOTL/HAbL/HBtL), connection section
+- `wiki/synthesis/human-role-in-ai-agents.md` — added testing-specific 3 rules from conclusion, override rate metric, link to new summary
+- `wiki/_index.md` — added summary page entry; page_count 21→22, source_count 6→7
+
+**ประเด็นสำคัญ**:
+- The 75%–16% stat (QA leaders vs. orgs with production AI) is the core framing: the gap is governance, not tooling
+- Override rate (10–30%) is a new concrete calibration KPI not previously in the wiki
+- Risk Score → autonomy level formula directly extends [[risk-based-testing]] beyond prioritization into governance
+
+---
+
+## [2026-04-13] query | What is the role of the human in the AI Agent?
+
+**สร้างใหม่**:
+- `wiki/synthesis/human-role-in-ai-agents.md` — autonomy level framework (4 levels), evolving role from user to fleet manager, human as decision authority at high-stakes points; spectrum: participant → supervisor → governor → auditor
+
+**อ้างอิงหลัก**: [[agentic-ai]], [[multi-agent-systems]]
+
+---
+
 ## [2026-04-12] ingest | AI in Software Testing: Trend Update & Business Readiness Guide (WLB, April 2026)
 
 **แหล่งที่มา**: We Love Bug Co., Ltd. (WLB). Internal Strategic Reference. April 2026.

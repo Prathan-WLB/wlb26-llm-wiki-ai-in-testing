@@ -93,6 +93,20 @@ Four levels of human involvement (from [[prompts-to-production-agentic-playbook]
 
 Choosing the right autonomy level is an architectural decision — not just a product preference. It determines the testing strategy, the observability requirements, and the acceptable failure modes.
 
+### Override Rate: The Calibration Signal
+
+For HITL deployments in testing, the human override rate (% of AI outputs changed or rejected) is the health metric:
+
+- **< 10%** — rubber-stamping; humans are approving without genuine evaluation; HITL is theater
+- **10–30%** — healthy; AI is useful but human judgment is genuinely engaged
+- **> 30%** — AI is not ready for this task; retrain or revert to manual
+
+The HOTL equivalent is an escalation rate of 10–15% of automated decisions triggering intervention. Above 20% signals miscalibrated thresholds.
+
+### Governance Is Not Optional
+
+Each autonomy level requires specific infrastructure to be valid — not just claimed. HOTL without a real-time monitoring dashboard and override path is not HOTL; it is an unsupervised AI with no escalation path. See [[ai-testing-autonomy-decision-guide]] for the full governance requirements matrix and testing-specific decision flowchart.
+
 ## ประเภทและ Pattern Orchestration
 
 ### Single Agent

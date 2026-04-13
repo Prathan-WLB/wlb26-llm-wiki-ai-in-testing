@@ -1,8 +1,8 @@
 ---
 title: Software Testing & AI — Wiki Index / ดัชนี Wiki
-updated: 2026-04-12
-page_count: 21
-source_count: 6
+updated: 2026-04-13
+page_count: 22
+source_count: 7
 ---
 
 # Software Testing & AI — Index / ดัชนี
@@ -62,6 +62,7 @@ Two intersecting axes / สองแกนที่ตัดกัน:
 | Page | Summary / สรุป | Axis |
 |------|----------------|------|
 | [[ais-impact-on-software-testing-qa-evolution]] | AI restructures QA roles across 3 waves; testers evolve from executors to orchestrators; 20–40% salary premium for AI skills / AI ปรับโครงสร้างบทบาท QA ใน 3 คลื่น | ai-for-testing |
+| [[ai-testing-autonomy-decision-guide]] | WLB (Apr 2026): decision flowchart + 19-task matrix mapping testing tasks to HITL/HOTL/HAbL/HBtL; override rate KPI; governance requirements; WLB stack transition roadmap / กรอบการตัดสินใจระดับ autonomy สำหรับ AI testing พร้อม decision matrix 19 งาน | ai-for-testing |
 | [[karpathy-llm-wiki-pattern]] | Karpathy's pattern for LLM-maintained persistent wikis; alternative to RAG; ingest/query/lint operations are agentic workflows / รูปแบบ wiki ที่ LLM ดูแลรักษา; ทางเลือกแทน RAG | both |
 | [[prompts-to-production-agentic-playbook]] | Goswami (InfoQ 2026): ASDLC, capability matrix for det. vs. agentic decomposition, 7 orchestration patterns, 5-artifact versioning; methodology beats model size (GPT-3.5 iterative 95.1% > GPT-4 zero-shot 67%) / playbook การพัฒนา agentic จาก prototype สู่ production | both |
 | [[google-agents-companion]] | Google (Feb 2025): AgentOps + trajectory eval + multi-agent patterns + contractor model; the "102" production guide for agent builders / คู่มือ "102" สำหรับ agent builder ที่เน้น production | both |
@@ -85,6 +86,7 @@ Two intersecting axes / สองแกนที่ตัดกัน:
 |------|----------------|
 | [[ai-tool-selection-rubric]] | When to use agents vs. gen AI vs. rule-based; with testing implications / เมื่อไหร่ควรใช้ agent vs. gen AI vs. rule-based; พร้อมนัยสำคัญด้านการทดสอบ |
 | [[contractor-model-and-oracle-problem]] | Google's contractor model as the field's clearest answer to Key Theme #1; where it succeeds and where the oracle problem remains open / contractor model ในฐานะคำตอบที่ชัดเจนที่สุดสำหรับ oracle problem | both |
+| [[human-role-in-ai-agents]] | The human's role in AI agent systems across a spectrum: participant → supervisor → governor → auditor; determined by risk, maturity, and compliance / บทบาทของมนุษย์ใน AI agent ตาม autonomy level | both |
 
 ---
 
