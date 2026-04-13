@@ -39,10 +39,10 @@ wiki/
   concepts/         Core ideas and techniques (12 pages).
   tools/            Tools, frameworks, and libraries.
   papers/           Paper and article summaries (2 pages).
-  summaries/        Source summaries (5 pages).
+  summaries/        Source summaries (6 pages).
   people/           Key researchers and practitioners.
   companies/        Companies and products.
-  synthesis/        Cross-cutting analysis (2 pages).
+  synthesis/        Cross-cutting analysis (3 pages).
 CLAUDE.md           Project instructions for Claude Code.
 commit-message-convention.md  Commit message convention for the team.
 ```
@@ -64,10 +64,12 @@ commit-message-convention.md  Commit message convention for the team.
 - Karpathy LLM Wiki Pattern
 - Prompts to Production: Agentic Playbook
 - AI in Software Testing: WLB Trend Update & Business Readiness Guide (2026)
+- AI in Software Testing: Autonomy Level Decision Guide — WLB (2026)
 
 ### Synthesis
 - AI Tool Selection Rubric
 - Contractor Model and the Oracle Problem
+- The Role of the Human in AI Agent Systems
 
 ---
 
