@@ -36,10 +36,10 @@ sources/            Raw source material (articles, papers, PDFs). Immutable.
 wiki/
   _index.md         Master index — overview, key themes, all pages by category.
   _log.md           Ingest log — one entry per session.
-  concepts/         Core ideas and techniques (12 pages).
+  concepts/         Core ideas and techniques (16 pages).
   tools/            Tools, frameworks, and libraries.
   papers/           Paper and article summaries (2 pages).
-  summaries/        Source summaries (6 pages).
+  summaries/        Source summaries (11 pages).
   people/           Key researchers and practitioners.
   companies/        Companies and products.
   synthesis/        Cross-cutting analysis (3 pages).
@@ -56,6 +56,7 @@ commit-message-convention.md  Commit message convention for the team.
 - LLM Evals, LLM-as-Judge, Hallucination
 - AI Test Generation, Self-Healing Tests, Risk-Based Testing, Pairwise Testing
 - Agentic RAG, Agent Observability
+- Automation Bias, RLHF, Interactive Machine Learning, Explainability
 
 ### Papers & Summaries
 - Google Agents Companion (2025)
@@ -65,6 +66,11 @@ commit-message-convention.md  Commit message convention for the team.
 - Prompts to Production: Agentic Playbook
 - AI in Software Testing: WLB Trend Update & Business Readiness Guide (2026)
 - AI in Software Testing: Autonomy Level Decision Guide — WLB (2026)
+- EU AI Act Article 14 — Human Oversight Requirements
+- IBM: Human-in-the-Loop — HITL/HOTL/HOOTL Taxonomy
+- Stanford HAI: Humans in the Loop — Design of Interactive AI Systems
+- MIT Sloan: AI Explainability and Rubber-Stamping (2025)
+- Entropy: HITL Systematic Review — 134 Studies (2026)
 
 ### Synthesis
 - AI Tool Selection Rubric
@@ -81,6 +87,7 @@ commit-message-convention.md  Commit message convention for the team.
 4. **Agents Change the Testing Problem** — Wave 3 autonomous testing is agentic AI applied to QA
 5. **Tool Selection Matters** — AI tool choice determines downstream testing complexity
 6. **QA Roles Are Restructuring** — from test executors to quality orchestrators
+7. **Explainability Enables Oversight** — human oversight without explainability becomes rubber-stamping; the two are complementary safeguards, not substitutes (MIT Sloan, 77% expert panel)
 
 ---
 
