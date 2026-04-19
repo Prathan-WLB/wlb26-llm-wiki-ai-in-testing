@@ -3,9 +3,9 @@ title: The Role of the Human in AI Agent Systems
 type: synthesis
 axis: both
 tags: [agentic-ai, human-in-the-loop, autonomy, multi-agent, oversight]
-related: [[agentic-ai]], [[multi-agent-systems]], [[agentops]], [[agent-observability]]
+related: [[agentic-ai]], [[multi-agent-systems]], [[agentops]], [[agent-observability]], [[automation-bias]], [[explainability]], [[ibm-human-in-the-loop]], [[stanford-hai-humans-in-the-loop-design]], [[mit-sloan-ai-explainability-rubber-stamping]], [[entropy-hitl-systematic-review-2026]], [[contractor-model-and-oracle-problem]]
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-04-19
 ---
 
 # The Role of the Human in AI Agent Systems
@@ -64,4 +64,4 @@ Where the human sits on this spectrum should be determined by:
 The HITL **override rate** (10–30%) is the signal distinguishing genuine human engagement from rubber-stamping. Below 10%, HITL is theater. Above 30%, the AI is not ready.
 
 ## Related
-[[agentic-ai]] · [[multi-agent-systems]] · [[agentops]] · [[agent-observability]] · [[ais-impact-on-software-testing-qa-evolution]] · [[ai-testing-autonomy-decision-guide]]
+[[agentic-ai]] · [[multi-agent-systems]] · [[agentops]] · [[agent-observability]] · [[ais-impact-on-software-testing-qa-evolution]] · [[ai-testing-autonomy-decision-guide]] · [[automation-bias]] · [[explainability]] · [[ibm-human-in-the-loop]] · [[stanford-hai-humans-in-the-loop-design]] · [[mit-sloan-ai-explainability-rubber-stamping]] · [[entropy-hitl-systematic-review-2026]] · [[contractor-model-and-oracle-problem]]

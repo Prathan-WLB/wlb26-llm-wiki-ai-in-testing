@@ -100,6 +100,14 @@ Two intersecting axes / สองแกนที่ตัดกัน:
 
 ---
 
+## Meta / เมตา
+
+| Page | Summary / สรุป |
+|------|----------------|
+| [[lint-report]] | Running health check log: contradictions, orphans, missing pages, stale claims, recommended sources / บันทึกการตรวจสุขภาพ wiki อย่างต่อเนื่อง |
+
+---
+
 ## Domain Overview / ภาพรวมของโดเมน
 
 This is an active intersection of software engineering and AI research. LLMs are beginning to generate, repair, and prioritize tests — automating work QA engineers do manually. At the same time, the rise of LLMs as production systems has created new testing problems: how do you reliably evaluate a system whose outputs are probabilistic and hard to specify? The two axes share foundational challenges: the oracle problem, the coverage problem, and the specification problem appear in both.

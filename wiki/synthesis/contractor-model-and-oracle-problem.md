@@ -3,9 +3,9 @@ title: The Contractor Model as an Answer to the Oracle Problem
 type: synthesis
 axis: both
 tags: [oracle-problem, contractor-model, agent-evaluation, specification, agentic-ai, llm-evals]
-related: [[agentic-ai]], [[llm-evals]], [[agentops]], [[multi-agent-systems]], [[google-agents-companion]]
+related: [[agentic-ai]], [[llm-evals]], [[agentops]], [[multi-agent-systems]], [[google-agents-companion]], [[human-role-in-ai-agents]]
 created: 2026-04-12
-updated: 2026-04-12
+updated: 2026-04-19
 ---
 
 # The Contractor Model as an Answer to the Oracle Problem
@@ -124,6 +124,6 @@ Its limitation is identical: the procedure only works if the humans filling in t
 ---
 
 ## Related
-[[agentic-ai]] · [[llm-evals]] · [[agentops]] · [[multi-agent-systems]] · [[llm-as-judge]]
+[[agentic-ai]] · [[llm-evals]] · [[agentops]] · [[multi-agent-systems]] · [[llm-as-judge]] · [[human-role-in-ai-agents]]
 [[google-agents-companion]] (primary source — contractor model, trajectory evaluation)
 [[one-year-of-agentic-ai-six-lessons]] (context — oracle problem in enterprise evals)

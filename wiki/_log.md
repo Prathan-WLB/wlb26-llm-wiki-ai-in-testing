@@ -11,6 +11,29 @@ grep "^## \[.*\] ingest" wiki/_log.md
 
 ---
 
+## [2026-04-19] lint | Health check — 32 files
+
+**Scope**: 32 files (16 concepts, 11 summaries, 3 synthesis, 2 papers, 2 meta)
+
+**Issues resolved this run**:
+- X1: `human-role-in-ai-agents.md` — added 7 cross-refs to HITL/XAI pages added Apr 19
+- X2: `hallucination.md` — added `[[automation-bias]]` and `[[explainability]]`
+- X3: `llm-evals.md` — added `[[rlhf]]`, `[[automation-bias]]`, `[[explainability]]`, `[[interactive-machine-learning]]`
+- X4: `contractor-model-and-oracle-problem.md` — added `[[human-role-in-ai-agents]]`
+- S3: `hallucination.md` — stub warning moved from bottom to top; removed redundant trailing stub note
+- X5: `lint-report.md` — no longer orphan; added to `_index.md` under new Meta section
+
+**Issues still open** (see `lint-report.md` for details):
+- M1 (HIGH): `oracle-problem.md` concept page does not exist — Key Theme #1 undefined
+- M2–M4 (MEDIUM): `bug-prediction.md`, `visual-testing.md`, `rag.md` missing
+- S1 (MEDIUM): Wave 1 end date has passed; `ais-impact-on-software-testing-qa-evolution.md` not updated
+- S2 (MEDIUM): Salary premium and reuse efficiency figures uncorroborated — no inline callout
+- C3 (MEDIUM): `summaries/` directory not documented in `CLAUDE.md`
+
+**Next recommended sources**: Barr et al. (2015) Oracle Problem survey; NIST AI 600-1 (already in sources/); RAGAS framework; World Quality Report 2025
+
+---
+
 ## [2026-04-13] ingest | AI in Software Testing — Autonomy Level Decision Guide (WLB, April 2026)
 
 **แหล่งที่มา**: We Love Bug Co., Ltd. (WLB). Internal Enterprise Deployment Reference. April 2026.

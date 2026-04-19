@@ -3,9 +3,9 @@ title: LLM Evals
 type: concept
 axis: testing-for-ai
 tags: [evals, evaluation, benchmarking, testing-for-ai, llm, metrics]
-related: [[agentic-ai]], [[llm-as-judge]], [[agent-observability]], [[hallucination]], [[prompts-to-production-agentic-playbook]]
+related: [[agentic-ai]], [[llm-as-judge]], [[agent-observability]], [[hallucination]], [[prompts-to-production-agentic-playbook]], [[rlhf]], [[automation-bias]], [[explainability]], [[interactive-machine-learning]]
 created: 2026-04-10
-updated: 2026-04-11
+updated: 2026-04-19
 ---
 
 # LLM Evals
@@ -207,7 +207,7 @@ Active tooling and research area (2025–2026). Frameworks: DeepEval, Ragas, Pro
 ---
 
 ## Related / หน้าที่เกี่ยวข้อง
-[[llm-as-judge]] · [[agent-observability]] · [[agentic-ai]] · [[hallucination]]
+[[llm-as-judge]] · [[agent-observability]] · [[agentic-ai]] · [[hallucination]] · [[rlhf]] · [[automation-bias]] · [[explainability]] · [[interactive-machine-learning]]
 [[one-year-of-agentic-ai-six-lessons]] (source / แหล่งที่มา)
 [[prompts-to-production-agentic-playbook]] (source / แหล่งที่มา — behavioral QA, eval dataset versioning, 95.1% methodology benchmark)
 [[google-agents-companion]] (source / แหล่งที่มา — trajectory evaluation 6 metrics, autorater concept, evaluation method comparison table)

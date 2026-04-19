@@ -3,12 +3,14 @@ title: Hallucination
 type: concept
 axis: testing-for-ai
 tags: [hallucination, evals, reliability, testing-for-ai, llm]
-related: [[llm-evals]], [[llm-as-judge]], [[agent-observability]]
+related: [[llm-evals]], [[llm-as-judge]], [[agent-observability]], [[automation-bias]], [[explainability]]
 created: 2026-04-10
-updated: 2026-04-10
+updated: 2026-04-19
 ---
 
 # Hallucination
+
+> **Stub** — core definition is complete; detection tooling, faithfulness scoring frameworks (RAGAS), and the irreducibility debate need expansion. See open questions below.
 
 ## Definition
 When an LLM generates factually incorrect or unsupported claims — stated with apparent confidence. The model "hallucinates" content that doesn't exist in its training data or retrieved context.
@@ -65,9 +67,5 @@ Active research area. RAG reduces hallucination by grounding the model in retrie
 - How do you detect hallucinations in domains where no ground truth is easily accessible? / จะตรวจจับ hallucination ในโดเมนที่ไม่มี ground truth ที่เข้าถึงได้ง่ายได้อย่างไร?
 - How does hallucination rate change as agents chain multiple LLM calls? / Hallucination rate เปลี่ยนอย่างไรเมื่อ agent เชื่อม LLM call หลายครั้ง?
 
-*Stub — expand as more sources are ingested / Stub — จะขยายเมื่อมีแหล่งที่มาเพิ่มเติม*
-
----
-
 ## Related / หน้าที่เกี่ยวข้อง
-[[llm-evals]] · [[llm-as-judge]] · [[agent-observability]]
+[[llm-evals]] · [[llm-as-judge]] · [[agent-observability]] · [[automation-bias]] · [[explainability]]
