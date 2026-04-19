@@ -76,12 +76,40 @@ Widely adopted (2025). Used by OpenAI, Anthropic, Google for RLHF and model asse
 
 ---
 
+## Human Subjectivity — The Fundamental Constraint
+
+IBM Think ([[ibm-human-in-the-loop]]) surfaces a foundational challenge that applies to LLM-as-judge at its core: **human annotators disagree not only on alleged facts but also on what "appropriate" model behavior should mean**. There is no objective ground truth for subjective quality — only consensus approximations from annotation pools.
+
+This matters for LLM-as-judge because:
+- The reward model (in RLHF) is trained on human pairwise preferences — which are inherently subjective and culturally situated
+- LLM judges trained on human-preference data inherit these subjectivities and call them "quality"
+- Calibrating an LLM judge against human ratings requires knowing *which* humans and *which* cultural/professional context defines "good"
+
+Practical implication: LLM-as-judge scores should always be reported with human calibration data — the sample size and demographic/domain composition of the human raters used to validate the judge's alignment. Without this, "the judge agrees with humans" is an unfalsifiable claim.
+
+## Explainability of Judge Outputs
+
+MIT Sloan ([[mit-sloan-ai-explainability-rubber-stamping]]) surfaces a requirement that applies directly to LLM-as-Judge deployments in high-stakes settings: **oversight requires explainability, not just the ability to override**.
+
+When an LLM judge scores an output, the score itself is a black-box output unless accompanied by reasoning. A human reviewer who receives only a score (or pass/fail) faces the same rubber-stamping risk as in any opaque AI system — they can accept or reject the score, but they cannot evaluate *why* the judge reached it. Over time, acceptance becomes the default.
+
+Practical implications:
+- LLM judges should be prompted to produce reasoning alongside scores — not just a number
+- Reviewer workflows should treat judge reasoning as a primary artifact, not a supplement
+- Calibration against human raters ([[ibm-human-in-the-loop]] recommendation) only works if reviewers can compare reasoning, not just scores
+- For EU high-risk AI contexts: judge scores used to inform decisions subject to Art. 14(4)(c) must be interpretable by the human overseer — an unexplained LLM score likely does not meet this standard
+
+See [[explainability]] for the broader context of how explainability enables substantive (not rubber-stamp) oversight.
+
 ## Open Questions / คำถามที่ยังไม่มีคำตอบ
 - Can LLM judges reliably detect hallucinations in domains where they themselves might hallucinate? / LLM judge สามารถตรวจจับ hallucination ในโดเมนที่ตัวเองก็อาจ hallucinate ได้หรือไม่?
 - How do you validate a judge's own reliability at scale? / จะตรวจสอบความน่าเชื่อถือของ judge เองในปริมาณมากได้อย่างไร?
+- Whose definition of "quality" does the judge encode — and is that appropriate for the deployment context? / judge ใช้นิยาม "คุณภาพ" ของใคร และเหมาะสมกับบริบทการใช้งานหรือไม่?
 
 ---
 
 ## Related / หน้าที่เกี่ยวข้อง
-[[llm-evals]] · [[hallucination]] · [[agentic-ai]]
+[[llm-evals]] · [[hallucination]] · [[agentic-ai]] · [[rlhf]] · [[automation-bias]] · [[explainability]]
 [[one-year-of-agentic-ai-six-lessons]] (source / แหล่งที่มา)
+[[ibm-human-in-the-loop]] (source / แหล่งที่มา — human subjectivity in annotation, annotator disagreement)
+[[mit-sloan-ai-explainability-rubber-stamping]] (source — explainability of judge outputs; rubber-stamping risk when scores lack reasoning)

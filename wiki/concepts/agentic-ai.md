@@ -107,6 +107,61 @@ The HOTL equivalent is an escalation rate of 10–15% of automated decisions tri
 
 Each autonomy level requires specific infrastructure to be valid — not just claimed. HOTL without a real-time monitoring dashboard and override path is not HOTL; it is an unsupervised AI with no escalation path. See [[ai-testing-autonomy-decision-guide]] for the full governance requirements matrix and testing-specific decision flowchart.
 
+### Wang's "Selective Inclusion" Reframe (Stanford HAI)
+
+[[stanford-hai-humans-in-the-loop-design]] offers the clearest design-philosophy statement of what the Autonomy Level Framework is actually doing:
+
+> Instead of viewing automation as the **removal** of human involvement, design it as the **selective inclusion** of human participation.
+
+This reframe converts the autonomy level question — which level to choose? — into an HCI design challenge: *where in the loop does human participation create the most value?* The Autonomy Level Framework provides the levers; Wang's principle provides the rationale for using them.
+
+The practical consequence: agentic system design starts not from "what can we automate?" but from "at which decision points does human judgment, taste, or tacit knowledge produce outputs that the algorithm cannot?" Human-in-the-Loop checkpoints are not a fallback for algorithm failures — they are designed inclusions at high-value judgment points.
+
+### Entropy Review: Five Loop Configurations (Extends Both Frameworks Above)
+
+The Entropy systematic review ([[entropy-hitl-systematic-review-2026]]) expands the taxonomy to five configurations, adding two patterns not captured by IBM's 3-level or the 4-level autonomy framework:
+
+| Configuration | Human Role | AI Role | Authority | Example Context |
+|--------------|-----------|---------|-----------|----------------|
+| **In-the-Loop** | Direct participation in every decision | Supports human decision-making | Human decides | Medical diagnosis, legal decisions |
+| **On-the-Loop** | Monitors, intervenes when necessary | Operates autonomously under supervision | Shared control | Drone surveillance, automated trading |
+| **Over-the-Loop** | Defines objectives, constraints, policies | Executes within predefined bounds | Human strategic | Policy systems, organizational AI |
+| **Under-the-Loop** | Executes final action based on AI input | Provides guidance and decision support | AI advisory | Clinical decision support, recommendations |
+| **Along-the-Loop** | Parallel collaboration on related tasks | Parallel collaboration with coordination | Lateral coordination | Co-creation, collaborative design |
+
+**Under-the-Loop** captures a pattern common in AI-assisted professional work: AI is the dominant reasoner, human is the executor. This is neither "in the loop" (human doesn't decide) nor "on the loop" (system isn't fully autonomous). Clinical decision support systems fit this pattern — the AI recommends, the clinician acts. This configuration has the unique risk that the human may act on AI guidance without having the cognitive resources to critically evaluate it.
+
+**Along-the-Loop** captures co-creation and collaborative design contexts where human and AI work as peers on parallel tasks with lateral coordination. This configuration is increasingly relevant for agentic AI in creative, research, and complex problem-solving contexts. The failure mode is coordination breakdown rather than oversight failure.
+
+**The key insight from the 3D taxonomy**: loop placement alone is insufficient. Two "On-the-Loop" systems with different interaction granularity (coarse vs. fine) and temporal characteristics (continuous vs. episodic) have fundamentally different operational profiles, cognitive demands, and failure modes. See [[entropy-hitl-systematic-review-2026]] for the full 3D taxonomy.
+
+### IBM's Complementary Taxonomy: HITL / HOTL / HOOTL
+
+IBM Think ([[ibm-human-in-the-loop]]) maps human involvement into three named positions that complement the 4-level framework above:
+
+| IBM Level | Equivalent | Key characteristic |
+|-----------|-----------|-------------------|
+| **HITL** (Human-in-the-Loop) | Human-in-the-Loop | Proactive participation at decision points |
+| **HOTL** (Human-on-the-Loop) | Human-on-the-Loop | Monitors autonomously-operating system; intervenes on deviation |
+| **HOOTL** (Human-out-of-the-Loop) | Human-above/behind-the-Loop | AI acts even when confidence is low or outcomes are irreversible |
+
+IBM's sharpest addition: HOOTL is described as a distinct risk category — systems that act "even when confidence is low or outcomes are irreversible" — not simply the autonomous end of a continuum. This gives practical guidance for when the lower autonomy levels become actively dangerous rather than merely less supervised.
+
+### EU AI Act Constraint on Autonomy Level Choice
+
+**Article 14 of the EU AI Act** (effective 2 August 2026) constrains valid autonomy level choices for **high-risk AI systems** (Annex III: biometric ID, critical infrastructure, employment, law enforcement, and others):
+
+- Art. 14(4)(d) requires the overseer to be able to **override, disregard, or reverse** output at any time
+- Art. 14(4)(e) requires an **emergency stop** accessible during operation
+
+These requirements effectively mandate **Human-on-the-Loop as the minimum** for EU high-risk AI:
+- **Human-above-the-Loop** (strategic governance only) — likely non-compliant: no real-time override capability
+- **Human-behind-the-Loop** (post-operational only) — non-compliant: no real-time override or stop capability
+
+Additionally, Art. 14(4)(b) requires designs that counteract **[[automation-bias]]** — systems must keep overseers aware of over-reliance risk, not just enable override in theory.
+
+> **Extends [[eu-ai-act-article-14-human-oversight]]**: autonomy level selection is a regulatory decision for EU high-risk AI, not just an architectural preference.
+
 ## ประเภทและ Pattern Orchestration
 
 ### Single Agent

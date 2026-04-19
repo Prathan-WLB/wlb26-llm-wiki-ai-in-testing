@@ -96,6 +96,22 @@ LangSmith visualizations also serve a secondary purpose: they surface that LLM c
 
 ---
 
+## EU AI Act — Observability as Legal Requirement
+
+**Article 14(4)(a)** of the EU AI Act (effective 2 August 2026) mandates that high-risk AI systems enable overseers to "properly understand the relevant capacities and limitations of the high-risk AI system and be able to duly monitor its operation."
+
+This elevates observability from engineering best practice to **legal compliance requirement** for any AI system classified as high-risk under Annex III (biometric identification, critical infrastructure, employment, essential services, law enforcement, and others).
+
+Practical implications:
+- Step-level trace logging is not optional for high-risk AI — it is the infrastructure that enables the legal oversight obligation
+- Overseers must have **real-time** visibility, not just post-hoc log access
+- Systems must expose capability and limitation information to the overseer — black-box operation does not comply
+- The "duly monitor" standard implies continuous, not sampling-based, monitoring capability
+
+> **Extends [[eu-ai-act-article-14-human-oversight]]**: Art. 14(4)(a) makes agent observability a compliance surface, not just an operational concern.
+
+---
+
 ## Open Questions / คำถามที่ยังไม่มีคำตอบ
 - How do you set meaningful anomaly detection thresholds for non-deterministic agents? / จะตั้งเกณฑ์การตรวจจับความผิดปกติที่มีความหมายสำหรับ agent ที่ไม่แน่นอนได้อย่างไร?
 - What's the right granularity — logging every token is too expensive, logging only final outputs is too coarse? / ระดับของรายละเอียดที่เหมาะสมคืออะไร?
@@ -104,6 +120,7 @@ LangSmith visualizations also serve a secondary purpose: they surface that LLM c
 ---
 
 ## Related / หน้าที่เกี่ยวข้อง
-[[agentic-ai]] · [[llm-evals]] · [[hallucination]]
+[[agentic-ai]] · [[llm-evals]] · [[hallucination]] · [[automation-bias]]
 [[one-year-of-agentic-ai-six-lessons]] (source / แหล่งที่มา — lesson 4)
 [[prompts-to-production-agentic-playbook]] (source / แหล่งที่มา — tracing as planning requirement, 63% path variation stat)
+[[eu-ai-act-article-14-human-oversight]] (source / แหล่งที่มา — Art. 14(4)(a) legal mandate for monitoring)

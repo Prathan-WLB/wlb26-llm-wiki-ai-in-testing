@@ -110,6 +110,26 @@ The dividing line: **understanding unstructured intent is agentic; acting on kno
 
 ---
 
+## Wang's Design Principles: The Philosophy Behind the Matrix
+
+[[stanford-hai-humans-in-the-loop-design]] provides the design philosophy that grounds the Capability Matrix's mechanics in a coherent human-centered theory.
+
+Wang's **four design principles** map onto the tool-selection problem:
+
+| Principle | Implication for Tool Selection |
+|-----------|-------------------------------|
+| **Value human agency** | Choose tools that harness human preference and judgment — not tools that eliminate the need for them. The rubric asks *where* human participation adds value, not how to minimize it. |
+| **Granularity is a virtue** | Decompose per step (the Capability Matrix approach) rather than deciding wholesale. Human interaction at natural decision points is the mechanism. |
+| **Interfaces should extend us** | Build tools that enable human learning and growth, not oracles that deliver unexamined answers. A tool extends capability; an oracle replaces judgment and breeds [[automation-bias]]. |
+| **Every situation has a unique balance** | No formula applies universally. The rubric gives dimensions and heuristics — the actual balance is a design judgment for each situation. |
+
+**The key reframe** (Wang, Stanford HAI): Instead of asking "how much can we automate?", ask "where in the loop does human participation create the most value?" This is the same question as the Capability Matrix — phrased as a design philosophy rather than an engineering decision.
+
+**Reduced algorithm perfection pressure**: Wang's Wekinator insight extends the rubric's cost analysis. When human feedback closes the quality loop, simpler algorithms suffice — investment in interaction design may yield more value than investment in model sophistication. This connects to [[llm-evals]]' finding that GPT-3.5 + ReAct iterative (95.1%) > GPT-4 zero-shot (67%): iterative human-guided processes often outperform raw model capability.
+
+---
+
 ## Source / แหล่งที่มา
 [[one-year-of-agentic-ai-six-lessons]] — lesson 2 / บทที่ 2: "Agents aren't always the answer"
 [[prompts-to-production-agentic-playbook]] — Capability Matrix methodology and step-level decomposition / วิธีการ Capability Matrix และการแยกย่อยระดับขั้นตอน
+[[stanford-hai-humans-in-the-loop-design]] — Wang's 4 design principles; selective inclusion philosophy; reduced algorithm perfection pressure

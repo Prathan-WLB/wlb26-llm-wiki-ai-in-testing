@@ -40,6 +40,105 @@ grep "^## \[.*\] ingest" wiki/_log.md
 **อ้างอิงหลัก**: [[agentic-ai]], [[multi-agent-systems]]
 
 ---
+## [2026-04-19] ingest | Human-in-the-Loop AI: A Systematic Review — Entropy 2026
+
+**แหล่งที่มา**: Lazaros, K.; Vrahatis, A.G.; Kotsiantis, S. *Entropy* 2026, 28, 377
+**DOI**: https://doi.org/10.3390/e28040377
+**ไฟล์**: `sources/papers/entropy-28-00377-v2.pdf` (50 หน้า, open access)
+**Method**: PRISMA-aligned systematic review; 134 studies in structured synthesis
+
+**สร้างใหม่**:
+- `wiki/summaries/entropy-hitl-systematic-review-2026.md` — full summary: 3D taxonomy, 5 loop configurations (In/On/Over/Under/Along), 7 method families with failure modes, trust calibration model (over/well/under-trust), 5-dimension HITL eval framework, adversarial manipulation risk, "human-with-the-loop" vision, connections table
+
+**อัปเดต**:
+- `wiki/concepts/automation-bias.md` — เพิ่ม "Trust Calibration: Over-Trust, Well-Calibrated, Under-Trust" section: tri-zone model with calibration interventions; skill degradation as over-trust consequence; "Scapegoat-in-the-loop" risk: human held responsible for AI decisions without meaningful oversight capacity
+- `wiki/concepts/interactive-machine-learning.md` — เพิ่ม "IML-Specific Failure Modes" section: non-stationary guidance, oscillatory updates, local patches degrading global performance, confirmation bias, cognitive overload; all from Table 1 of the review
+- `wiki/concepts/rlhf.md` — เพิ่ม 3 failure modes: collapse to safe but uninformative outputs (distinct from reward hacking), norm/preference drift, inconsistent rater judgments; updated Related
+- `wiki/concepts/agentic-ai.md` — เพิ่ม "Entropy Review: Five Loop Configurations" section: adds Under-the-Loop (AI advisory, human executor) and Along-the-Loop (collaborative peer) — two patterns not in existing 4-level framework; 3D taxonomy insight: loop placement alone insufficient
+- `wiki/_index.md` — เพิ่ม entropy-hitl-systematic-review-2026 ใน Summaries; page_count: 30, source_count: 11
+
+**น่าสนใจ**: สามประเด็นที่ไม่เคยมีใน wiki ก่อน: (1) **Under-the-Loop** — AI advisory + human executor เป็น pattern ที่พบบ่อยมากในระบบ decision support แต่ไม่มีชื่อที่ชัดเจนในแหล่งอื่น; (2) **Adversarial manipulation** ของ human components ใน HITL — threat model ต้องรวม human vulnerabilities ไม่ใช่แค่ technical vulnerabilities; (3) **5-dimension HITL eval framework** และ vector reporting principle: รายงานผลเป็น vector ต่อ dimension ไม่ใช่ aggregate score — ป้องกันการ suppress failure modes ที่ dimension หนึ่งดีขึ้นขณะอีก dimension แย่ลง ความสำเร็จ HITL ขึ้นอยู่กับ workflow integration มากกว่า model accuracy — confirmed across all 6 domains
+
+---
+
+## [2026-04-19] ingest | AI Explainability: How to Avoid Rubber-Stamping Recommendations — MIT Sloan
+
+**แหล่งที่มา**: MIT Sloan Management Review, June 12, 2025
+**URL**: https://sloanreview.mit.edu/article/ai-explainability-how-to-avoid-rubber-stamping-recommendations/
+**Authors**: Elizabeth M. Renieris, David Kiron, Steven Mills, Anne Kleppe (research partner: BCG)
+**Method**: 30-person international expert panel + global executive survey (n=1,221)
+
+**สร้างใหม่**:
+- `wiki/summaries/mit-sloan-ai-explainability-rubber-stamping.md` — full summary: central finding (77% panel), complementarity framework, rubber-stamping mechanism, explainability theater, 4 strategic recommendations, organizational survey data, regulatory context
+- `wiki/concepts/explainability.md` — new concept: definition, types (global/local, intrinsic/post-hoc, by audience), explainability theater problem, context-dependent explainability framework, connection to oversight/automation-bias/llm-as-judge/EU AI Act
+
+**อัปเดต**:
+- `wiki/concepts/automation-bias.md` — เพิ่ม "Explainability as the Upstream Enabler" section: opacity → passive acceptance → rubber-stamping mechanism; explainability theater as symmetrical failure; MIT Sloan 77% finding; updated Related links
+- `wiki/concepts/llm-as-judge.md` — เพิ่ม "Explainability of Judge Outputs" section: judge scores without reasoning create rubber-stamping risk; EU Art. 14(4)(c) implication for judge deployments; updated Related links
+- `wiki/summaries/eu-ai-act-article-14-human-oversight.md` — เพิ่มย่อหน้า MIT Sloan empirical support ใต้ Art. 14(4)(c) interpretability standard; updated Related links
+- `wiki/_index.md` — เพิ่ม explainability ใน Concepts; mit-sloan summary ใน Summaries; Key Theme #7; page_count: 29, source_count: 10
+
+**น่าสนใจ**: การค้นพบที่ชัดเจนที่สุดคือ **77% panel disagreement** กับ proposition ว่า oversight ลด explainability needs — นี่เป็น empirical evidence ที่แข็งแกร่งว่าทั้งสองเป็น complementary safeguards Concept "explainability theater" เป็น insight ใหม่ที่สำคัญ: performative explanations อาจ *อันตรายกว่า* opacity เพราะลบ skepticism ของ overseer ไป โดยไม่ให้ insight จริง Connection กับ [[llm-as-judge]] ชัดเจน: judge scores ไม่มี reasoning คือ black-box output — oversight ต้องการ reasoning trail ไม่ใช่แค่ score
+
+---
+
+## [2026-04-19] ingest | Humans in the Loop: The Design of Interactive AI Systems — Stanford HAI
+
+**แหล่งที่มา**: Ge Wang, Stanford HAI (Human-Centered AI), October 20, 2019
+**URL**: https://hai.stanford.edu/news/humans-loop-design-interactive-ai-systems
+
+**สร้างใหม่**:
+- `wiki/summaries/stanford-hai-humans-in-the-loop-design.md` — full summary: BRB critique (3 structural shortcomings of full automation), jargon slider / Wekinator / interactive source separation examples, Wang's 4 design principles, Polanyi tacit knowledge, contrast table with IBM framing
+- `wiki/concepts/interactive-machine-learning.md` — concept: human inside feedback loop during operation (not just at dataset creation); core loop diagram; Wekinator / source separation / jargon slider as canonical examples; reduced algorithm perfection pressure; connection to RLHF and active learning; IML limitations (scalability, fatigue, subjectivity drift)
+
+**อัปเดต**:
+- `wiki/concepts/automation-bias.md` — เพิ่ม "BRB Design as the Structural Cause" section: Wang's argument that BRB design *creates* the conditions for automation bias; tool-vs-oracle distinction: oracle interfaces structurally breed bias, tool interfaces structurally resist it; updated Related section
+- `wiki/synthesis/ai-tool-selection-rubric.md` — เพิ่ม "Wang's Design Principles: The Philosophy Behind the Matrix" section: 4 principles mapped to tool-selection implications; "selective inclusion" reframe; reduced algorithm perfection pressure connects to llm-evals ReAct finding
+- `wiki/concepts/agentic-ai.md` — เพิ่ม "Wang's Selective Inclusion Reframe" section: autonomy level choice reframed as "where does human participation create the most value?" — HITL checkpoints as designed inclusions, not fallbacks
+- `wiki/_index.md` — เพิ่ม interactive-machine-learning ใน Concepts; stanford-hai-humans-in-the-loop-design ใน Summaries; page_count: 27, source_count: 9
+
+**น่าสนใจ**: Wang's deepest contribution คือการ reframe automation: ไม่ใช่ "การนำมนุษย์ออก" แต่คือ "selective inclusion of human participation" เปลี่ยน engineering question → HCI design challenge Tacit knowledge (Polanyi) เป็น root ของทั้ง oracle problem (Key Theme #1) และ BRB failure: สิ่งที่มนุษย์ "รู้มากกว่าที่พูดได้" — taste, judgment, meaning — ไม่สามารถ specify เป็น input ให้ BRB system ได้ Wekinator case study เป็น existence proof ที่ powerful: single-layer network + good HITL interaction design > complex network alone ตรงกับ [[llm-evals]] finding (GPT-3.5 + ReAct 95.1% > GPT-4 zero-shot 67%)
+
+---
+
+## [2026-04-12] ingest | What Is Human-in-the-Loop (HITL)? — IBM Think
+
+**แหล่งที่มา**: IBM Think Topics — "What Is Human In The Loop (HITL)?"
+**URL**: https://www.ibm.com/think/topics/human-in-the-loop
+
+**สร้างใหม่**:
+- `wiki/summaries/ibm-human-in-the-loop.md` — full summary: HITL/HOTL/HOOTL taxonomy, 3 mechanisms (annotation, active learning, RLHF), use cases across healthcare/finance/autonomous vehicles, benefits and challenges, annotator subjectivity as fundamental constraint
+- `wiki/concepts/rlhf.md` — concept: 3-stage process (SFT → reward model → PPO); connection to llm-as-judge pairwise; limitations (subjectivity, reward hacking, cost); variants (RLAIF, DPO)
+
+**อัปเดต**:
+- `wiki/concepts/agentic-ai.md` — เพิ่ม IBM HITL/HOTL/HOOTL taxonomy section: complements 4-level autonomy framework; HOOTL specifically flagged as risk category (acts "even when confidence is low or outcomes are irreversible")
+- `wiki/concepts/automation-bias.md` — เพิ่ม "HITL as the Structural Countermeasure" section: IBM's key caveat that HITL creates the opportunity for oversight, not the guarantee — HITL itself can degrade into rubber-stamping
+- `wiki/concepts/llm-as-judge.md` — เพิ่ม "Human Subjectivity — The Fundamental Constraint" section: annotators disagree on what "appropriate behavior" means; LLM judges inherit these subjectivities; practical implication: judge scores must be reported with human calibration data; added new open question and related links
+- `wiki/_index.md` — เพิ่ม rlhf ใน Concepts; summary ใน Summaries; page_count: 25, source_count: 8
+
+**น่าสนใจ**: IBM's sharpest contribution ไม่ใช่ taxonomy (HITL/HOTL/HOOTL) แต่คือ observation ที่ว่า **HOOTL คือ risk category ไม่ใช่แค่ end of spectrum** — "AI acts even when confidence is low or outcomes are irreversible" ทำให้ HOOTL ไม่ใช่แค่ human-free automation แต่คือ autonomous action under uncertainty without oversight ซึ่งแตกต่างจาก HOTL เชิงคุณภาพ Human subjectivity ใน annotation เป็น insight ที่ต่อกับ [[llm-as-judge]] โดยตรง: judge scores ที่ไม่ระบุ human calibration baseline คือ unfalsifiable claim — ไม่รู้ว่า "agree with humans" หมายถึง humans คนไหน
+
+---
+
+## [2026-04-12] ingest | EU AI Act — Article 14: Human Oversight
+
+**แหล่งที่มา**: EU Artificial Intelligence Act, Article 14 (with Recitals 66 and 73)
+**URL**: https://artificialintelligenceact.eu/article/14/
+**บังคับใช้**: 2 สิงหาคม 2569 (2 August 2026)
+
+**สร้างใหม่**:
+- `wiki/summaries/eu-ai-act-article-14-human-oversight.md` — full summary: 5 mandatory oversight capabilities, dual provider/deployer obligation, enhanced biometric rule, practical compliance checklist, connections to existing wiki concepts
+- `wiki/concepts/automation-bias.md` — concept: legally mandated risk under Art. 14(4)(b); how it manifests in AI workflows; design countermeasures; connections to llm-as-judge and self-healing tests
+
+**อัปเดต**:
+- `wiki/concepts/agentic-ai.md` — เพิ่ม "EU AI Act Constraint on Autonomy Level Choice" ใน Autonomy Level Framework section: Art. 14 mandates Human-on-the-Loop as minimum for high-risk AI; Human-above/behind-the-Loop likely non-compliant
+- `wiki/concepts/agentops.md` — เพิ่ม "EU AI Act Compliance Implications" section: stop button (Art. 14(4)(e)), override capability (14(4)(d)), monitoring (14(4)(a)), interpretability (14(4)(c)), automation bias countermeasures (14(4)(b)); dual provider/deployer structure
+- `wiki/concepts/agent-observability.md` — เพิ่ม "EU AI Act — Observability as Legal Requirement" section: Art. 14(4)(a) elevates observability from best practice to legal compliance for high-risk AI
+- `wiki/_index.md` — เพิ่ม automation-bias ใน Concepts; summary ใน Summaries; page_count: 23, source_count: 7
+
+**น่าสนใจ**: Article 14 เป็น source แรกใน wiki ที่นำมิติ **กฎหมาย** เข้ามา — สิ่งที่เคยเป็น "best practice" (observability, human oversight, stop mechanisms) กลายเป็น **ข้อบังคับทางกฎหมาย** สำหรับ high-risk AI ใน EU ที่น่าสังเกตที่สุดคือ: **automation bias** ถูกระบุชื่อในกฎหมาย EU เป็นครั้งแรก — ไม่ใช่แค่ concern ด้านการออกแบบ แต่เป็น legal risk ที่ provider ต้องออกแบบป้องกัน กรอบ 4 ระดับ autonomy ใน [[agentic-ai]] ซึ่งก่อนหน้านี้เป็นเพียง architectural choice ตอนนี้มีข้อจำกัดทางกฎหมายที่ชัดเจน: Human-above/behind-the-Loop อาจไม่ compliant สำหรับ high-risk AI systems ใน EU
+
+---
 
 ## [2026-04-12] ingest | AI in Software Testing: Trend Update & Business Readiness Guide (WLB, April 2026)
 

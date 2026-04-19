@@ -118,6 +118,26 @@ Emerging discipline (2025). Terminology is still being standardized — "AgentOp
 
 ---
 
+## EU AI Act Compliance Implications
+
+**Article 14** of the EU AI Act (effective 2 August 2026) adds legal weight to several AgentOps components for any agent system classified as high-risk:
+
+| AgentOps Component | Article 14 Requirement |
+|-------------------|----------------------|
+| **Emergency stop mechanism** | Art. 14(4)(e): overseer must be able to interrupt the system via a "stop" button or equivalent |
+| **Override capability** | Art. 14(4)(d): overseer must be able to disregard, override, or reverse system output at any time |
+| **Monitoring infrastructure** | Art. 14(4)(a): overseer must be able to duly monitor operation — observability is legally required |
+| **Output interpretability** | Art. 14(4)(c): output must be correctly interpretable by the overseer |
+| **Automation bias countermeasures** | Art. 14(4)(b): system must keep overseer aware of over-reliance risk |
+
+The **dual provider/deployer structure** of Art. 14(3) maps directly onto AgentOps deployment:
+- **Provider responsibility**: build oversight features in before placing on market (stop button, override mechanism, monitoring hooks)
+- **Deployer responsibility**: implement operational oversight measures — cannot rely entirely on provider-built features
+
+> **Extends [[eu-ai-act-article-14-human-oversight]]**: AgentOps is the operational framework through which Article 14 compliance is implemented.
+
+---
+
 ## Open Questions
 - Where exactly does AgentOps end and application observability begin? At what granularity should traces be collected in production?
 - How do you run A/B experiments on agents when execution paths are non-deterministic and small sample sizes may not reach statistical significance?
@@ -126,5 +146,6 @@ Emerging discipline (2025). Terminology is still being standardized — "AgentOp
 ---
 
 ## Related
-[[agentic-ai]] · [[agent-observability]] · [[llm-evals]] · [[multi-agent-systems]]
+[[agentic-ai]] · [[agent-observability]] · [[llm-evals]] · [[multi-agent-systems]] · [[automation-bias]]
 [[google-agents-companion]] (source)
+[[eu-ai-act-article-14-human-oversight]] (source — Art. 14 compliance requirements map to AgentOps components)

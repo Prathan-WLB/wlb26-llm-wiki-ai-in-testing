@@ -1,8 +1,8 @@
 ---
 title: Software Testing & AI — Wiki Index / ดัชนี Wiki
-updated: 2026-04-13
-page_count: 22
-source_count: 7
+updated: 2026-04-19
+page_count: 32
+source_count: 12
 ---
 
 # Software Testing & AI — Index / ดัชนี
@@ -23,6 +23,7 @@ Two intersecting axes / สองแกนที่ตัดกัน:
 3. **Evals as a Discipline** — LLM evaluation becoming its own engineering field / LLM evaluation กำลังกลายเป็นสาขาวิศวกรรมของตัวเอง
 4. **Agents Change the Testing Problem** — Wave 3 autonomous testing is agentic AI applied to QA / คลื่น 3 ของการทดสอบอัตโนมัติคือ agentic AI ที่ใช้กับ QA
 5. **Tool Selection Matters** — the AI tool choice upstream determines testing complexity downstream / การเลือก AI tool กำหนดความซับซ้อนของการทดสอบ downstream
+7. **Explainability Enables Oversight** — human oversight without explainability becomes rubber-stamping; the two are complementary safeguards, not substitutes (MIT Sloan, 77% expert panel) / oversight ที่ไม่มี explainability กลายเป็นการประทับตรา; ทั้งสองเป็น safeguard ที่เสริมกัน
 6. **QA Roles Are Restructuring** — from test executors to quality orchestrators; 20–40% salary premium for AI-fluent testers / บทบาท QA กำลังปรับโครงสร้าง; premium 20–40% สำหรับผู้ทดสอบที่ใช้ AI ได้
 
 ---
@@ -43,6 +44,10 @@ Two intersecting axes / สองแกนที่ตัดกัน:
 | [[agentic-rag]] | Agents that actively orchestrate retrieval — iterative query refinement, multi-source selection, validation before generation / agent ที่ประสานงาน retrieval อย่างแข็งขัน | both |
 | [[risk-based-testing]] | AI converts subjective risk judgment into data-driven scoring using defect history, complexity, and change frequency; drives test prioritization / AI เปลี่ยนการตัดสินใจเรื่องความเสี่ยงเป็นคะแนนที่วัดได้ | ai-for-testing |
 | [[pairwise-testing]] | Combinatorial technique covering all parameter pairs; AI adds extraction from requirements, risk weighting, and auto-regeneration / เทคนิค combinatorial ครอบคลุมทุกคู่พารามิเตอร์ | ai-for-testing |
+| [[automation-bias]] | Tendency to over-rely on AI outputs without critical evaluation; legally mandated risk under EU AI Act Art. 14(4)(b); must be designed against / แนวโน้มพึ่งพา AI output มากเกินไป | both |
+| [[rlhf]] | Reinforcement Learning from Human Feedback — reward model trained on human pairwise preferences guides LLM alignment; foundation of GPT-4, Claude, Gemini / เทคนิคการ align LLM ด้วย human preference | testing-for-ai |
+| [[interactive-machine-learning]] | Human inside the feedback loop during operation — not just at dataset creation; IML reduces algorithm perfection pressure; Wekinator, interactive source separation as canonical examples / มนุษย์อยู่ใน feedback loop ระหว่างการทำงาน | both |
+| [[explainability]] | The capacity to produce human-understandable accounts of AI reasoning; complementary to (not substitutable for) human oversight; explainability theater is the symmetrical failure to opacity / ความสามารถในการอธิบายเหตุผลของ AI ให้มนุษย์เข้าใจ | both |
 
 ## Tools / เครื่องมือ
 
@@ -67,6 +72,11 @@ Two intersecting axes / สองแกนที่ตัดกัน:
 | [[prompts-to-production-agentic-playbook]] | Goswami (InfoQ 2026): ASDLC, capability matrix for det. vs. agentic decomposition, 7 orchestration patterns, 5-artifact versioning; methodology beats model size (GPT-3.5 iterative 95.1% > GPT-4 zero-shot 67%) / playbook การพัฒนา agentic จาก prototype สู่ production | both |
 | [[google-agents-companion]] | Google (Feb 2025): AgentOps + trajectory eval + multi-agent patterns + contractor model; the "102" production guide for agent builders / คู่มือ "102" สำหรับ agent builder ที่เน้น production | both |
 | [[ai-in-software-testing-wlb-2026]] | WLB internal report (Apr 2026): As-Is→To-Be map for 4 areas (Strategy, Plan, Case Design, E2E); 80% time reduction benchmark; phased adoption roadmap; 61% org adoption stat / รายงาน WLB ครอบคลุม 4 พื้นที่หลัก | ai-for-testing |
+| [[eu-ai-act-article-14-human-oversight]] | EU AI Act Art. 14: 5 mandatory oversight capabilities for high-risk AI; automation bias as legal risk; dual provider/deployer obligation; effective 2 Aug 2026 / ข้อกำหนดกำกับดูแลมนุษย์สำหรับ AI ความเสี่ยงสูง | both |
+| [[ibm-human-in-the-loop]] | IBM Think: HITL/HOTL/HOOTL taxonomy; 3 mechanisms (annotation, active learning, RLHF); when to use; annotator subjectivity as fundamental constraint / อนุกรมวิธาน HITL และกลไกสำคัญ | both |
+| [[stanford-hai-humans-in-the-loop-design]] | Wang (Stanford HAI): BRB critique (3 shortcomings of full automation), jargon slider/Wekinator/source separation examples, 4 design principles, selective inclusion reframe, tacit knowledge root of oracle problem / ปรัชญาการออกแบบ HITL และหลักการ 4 ข้อ | both |
+| [[mit-sloan-ai-explainability-rubber-stamping]] | MIT Sloan + BCG: 77% expert panel finds explainability and oversight are complementary not competing; rubber-stamping mechanism (opacity → passive acceptance → illusion of control); explainability theater; 4 strategic recommendations / explainability และ oversight เป็น safeguard ที่เสริมกัน | both |
+| [[entropy-hitl-systematic-review-2026]] | Lazaros et al. (Entropy 2026): 50-page PRISMA systematic review of 134 studies; 3D taxonomy (loop placement × granularity × temporal); 5 loop configurations; trust calibration model (over/well/under-trust); 7 method families with failure modes; 5-dimension HITL eval framework; adversarial manipulation as HITL security risk / systematic review ของ HITL AI ที่ครอบคลุมที่สุด | both |
 
 ## People / บุคคล
 
